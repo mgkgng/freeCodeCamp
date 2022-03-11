@@ -1,7 +1,60 @@
-BoxLayoutExample: 
+StackLayoutExample:
 
-<BoxLayoutExample>
-	orientation: "vertical"
+<StackLayoutExample>:
+	Button:
+		text: "A"
+		size_hint: .2, .2
+	Button:
+		text: "B"
+		size_hint: .2, .2	
+	Button:
+		text: "C"
+		size_hint: .2, .2
+	Button:
+		text: "D"
+		size_hint: .2, .2	
+	Button:
+		text: "E"
+		size_hint: .2, .2	
+	Button:
+		text: "F"
+		size_hint: .2, .2
+
+
+
+
+<GridLayoutExample@GridLayout>:
+	#rows or cols mandatory
+	cols: 3
+	Button:
+		text: "A"
+		size_hint: .5, .1
+	BoxLayoutExample
+	Button:
+		text: "C"
+	Button:
+		text: "D"
+		size_hint: .5, .1
+
+	Button:
+		text: "E"
+	Button:
+		text: "F"
+
+<AnchorLayoutExample>:
+	#right, left, center / bottom, top, center
+	anchor_x: "center"
+	anchor_y: "top"
+	BoxLayout:
+		size_hint: .2, .2
+		Button:
+			text: "A"
+		Button:
+			text: "B"
+
+
+<BoxLayoutExample>:
+	orientation: "horizontal"
 	Button:
 		text: "A"
 		#size: "20dp", "40dp"
@@ -11,6 +64,8 @@ BoxLayoutExample:
 		# y, center_y, top
 		pos_hint: {"x": .3}
 	BoxLayout:
+		orientation: "vertical"
+		spacing: "10dp"
 		Button:
 			text: "B1"
 		Button:
